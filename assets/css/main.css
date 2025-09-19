@@ -1861,7 +1861,7 @@ form button.btn:hover {
   border-radius: 16px;
   background:
     url("#") no-repeat center center/cover,
-    linear-gradient(135deg, #040E18 0%, #093C70 100%);
+    linear-gradient(135deg,#2c286e 80%,  #eba126 100%);
   z-index: 0;
 }
 
