@@ -1080,7 +1080,15 @@ section,
     url("../../assets/img/hero-2.webp") no-repeat center center/cover,
     linear-gradient(135deg, #040E18 100%, #093C70 100%);
 }
-
+.hero .hero-background-2 {
+  position: absolute;
+  inset: 10px;
+  border-radius: 16px;
+  z-index: 0;
+  background:
+    url("../../assets/img/hero-doors.webp") no-repeat center center/cover,
+    linear-gradient(135deg, #040E18 100%, #093C70 100%);
+}
 .hero .hero-overlay {
   position: absolute;
   top: 0;
