@@ -7,8 +7,9 @@ require '../PHPMailer/src/Exception.php';
 require '../PHPMailer/src/PHPMailer.php';
 require '../PHPMailer/src/SMTP.php';
 
-// Check if form was submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    // Sanitize POST data
     $name    = htmlspecialchars($_POST['name']);
     $phone   = htmlspecialchars($_POST['phone']);
     $email   = htmlspecialchars($_POST['email']);
@@ -16,23 +17,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $mail = new PHPMailer(true);
 
+    // Set charset to UTF-8 to support emojis and special characters
+    $mail->CharSet = 'UTF-8';
+
     try {
         // SMTP configuration
         $mail->isSMTP();
-        $mail->Host       = 'smtp.yourdomain.com';   // your SMTP server
+        $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'you@yourdomain.com';    // SMTP username
-        $mail->Password   = 'yourpassword';          // SMTP password
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // or PHPMailer::ENCRYPTION_SMTPS
-        $mail->Port       = 587; // 465 for SMTPS
+        $mail->Username   = 'harry@astraresults.com';    // Your Gmail
+        $mail->Password   = 'pzuhhxmmirtxsjry';         // Your Gmail App Password
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+        $mail->Port       = 465;
 
         // Sender & recipient
-        $mail->setFrom('you@yourdomain.com', 'Website Contact Form');
-        $mail->addAddress('recipient@domain.com', 'Your Name');
+        $mail->setFrom('harry@astraresults.com', 'Astra Results');
+        $mail->addAddress('carvel@astraresults.com', 'Carvel Russ');
 
         // Email content
         $mail->isHTML(true);
-        $mail->Subject = 'New Contact Form Submission';
+        $mail->Subject = 'You\'ve Got a New Lead! 🎉';
         $mail->Body    = "
             <h2>Contact Request</h2>
             <p><strong>Name:</strong> {$name}</p>
@@ -41,12 +45,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p><strong>Message:</strong><br>{$message}</p>
         ";
 
-        // Send mail
-        $mail->send();
-        echo 'OK';
+        // Send email
+        if($mail->send()) {
+            // Redirect to thank-you page
+            header('Location: ../thank-you.html');
+            exit;
+        } else {
+            // Redirect to error page
+            header('Location: ../form-error.html');
+            exit;
+        }
+
     } catch (Exception $e) {
-        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        // If sending failed, redirect to error page
+        header('Location: ../form-error.html');
+        exit;
     }
+
 } else {
-    echo "Invalid request.";
+    // Invalid request
+    header('Location: ../form-error.html');
+    exit;
 }
