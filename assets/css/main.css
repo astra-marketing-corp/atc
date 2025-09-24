@@ -2104,18 +2104,18 @@ form button.btn:hover {
   border-top-right-radius: 30px;
   padding: 60px 20px;
 }
-.contact-section::before {
+/* .contact-section::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-   background: rgba(44, 41, 103, 0.6); /* #2c2967 with 60% opacity */
+   background: rgba(44, 41, 103, 0.6);
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  z-index: 0; /* keeps overlay behind content */
-}
+  z-index: 0;
+} */
 .contact-section > * {
   position: relative;
   z-index: 1;
