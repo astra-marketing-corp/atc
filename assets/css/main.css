@@ -441,13 +441,14 @@ h6 {
 /* Location badge */
 .header .badge.location {
   display: inline-flex;
-  padding: px 10px;
+  padding: 10px 15px;
   align-items: center;
   border-radius: 500px;
-  background:#eba126;
+  background:#2c2967;
   gap: 8px;
   font-size: 14px;
-  color : #2c2967;
+  color : #FFF;
+  line-height: 100%;
 }
 /* Location badge */
 .header .badge.location-2 {
@@ -455,9 +456,10 @@ h6 {
   padding: 10px 14px;
   align-items: center;
   border-radius: 500px;
-  background:#2c2967;
+  background:#eba126;
   gap: 8px;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 600;
   color : #FFFF;
 }
 .header .logo {
@@ -484,13 +486,20 @@ h6 {
 .header .logo h1 span {
   color: var(--accent-color);
 }
-
+.header .badge.promotion {
+  background: #eba126;
+  border-radius: 20px;
+  color: #2c2967;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
 .header .header-cta-btn .badge.promotion {
   display: inline-block;
-  padding: 2px 10px;
-  background: #fff;
-  border-radius: 0;
-  color: #083665;
+  padding: 2px 15px;
+  background: #eba126;
+  border-radius: 20px;
+  color: #2c2967;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.6px;
@@ -498,7 +507,8 @@ h6 {
 
 .header .header-cta-btn h3 {
   color: #fff;
-  font-size: 26px;
+  /* font-size: 26px; */
+   font-size: clamp(26px, 6vw, 30px);
   font-weight: 700;
   margin: 0;
   line-height: 1.2;
@@ -590,7 +600,6 @@ h6 {
 ------------------- */
 
 /* Tablet and up keep same as desktop (no changes) */
-
 /* Mobile screens */
 @media (max-width: 767px) {
 
@@ -600,34 +609,57 @@ h6 {
   }
 
   .header .container-fluid {
-    margin-top: 1%;
+    margin-top: 4%;
     border-radius: 10px;
+    padding: 2px 1%;  /* smaller side padding → closer to edge */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
   }
 
+  /* Logo section */
   .header .logo {
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-bottom: 10px;
   }
 
   .header .logo img {
-    max-height: 50px;
+    max-width: 140px;   /* slightly larger */
+    height: auto;
+    
   }
 
+  /* CTA container */
   .header .header-cta-btn {
-    text-align: center;
+    text-align: right;
     width: 100%;
+    padding-right: 5px;
   }
 
   .header .header-cta-btn h3 {
-    font-size: 18px;
+    color: #2c2967;
+    font-size: clamp(23px, 5vw, 26px); /* bigger, fluid */
+    font-weight: 1000;
+    letter-spacing: -1px;
+    /* margin: 1px 0; */
   }
 
-  .header .header-cta-btn .badge.promotion {
-    font-size: 11px;
-    padding: 2px 8px;
-  }
+.header .header-cta-btn .badge.promotion {
+  font-size: clamp(14px, 4vw, 16px);
+  padding: 1px 14px;   /* less top/bottom, more left/right */
+  font-weight: bold;
+  line-height: 130%;
+  display: inline-block;
+  margin: 6px auto 6px 0;
+  border-radius: 20px;  /* keeps it pill-shaped */
 }
+
+
+}
+
+
 
 /* Global Header on Scroll */
 .scrolled .header {
@@ -1082,6 +1114,13 @@ section,
   overflow: hidden;
 }
 
+
+@media (min-width: 768px) {
+  .mobile-slider {
+    display: none;
+  }
+}
+
 .hero .hero-background {
   position: absolute;
   inset: 10px;
@@ -1125,6 +1164,7 @@ section,
 }
 
 .hero .hero-content .badge {
+  margin-top: 40px;
   padding: 10px 24px;
   border-radius: 500px;
   background: rgba(255, 255, 255, 0.10);
@@ -1135,6 +1175,99 @@ section,
   letter-spacing: 12.8px;
   font-size: 20px;
 }
+
+@media (max-width: 767px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  } 
+  .hero .container .hero-content h4 {
+    text-align: center;
+    max-width: 90%;    /* full width */
+    margin: 0 auto;
+    display: block;
+    font-size: clamp(17 px, 2vw, 18px);  /* smaller subtitle size */
+    font-weight: 400;   /* lighter look */
+    letter-spacing: 32%; /* wide spacing like in image */
+    line-height: 110%;   /* tighter spacing */
+  }
+
+  .hero .container .hero-content h1 {
+    text-align: center;
+    max-width: 93%;    /* full width */
+    margin: 8px auto 0; /* slight gap below h4 */
+    display: block;
+    font-size: clamp(25px, 5vw, 42px); /* bold, large scaling */
+    font-weight: 800;
+    line-height: 1.2;   /* compact spacing */
+  }
+
+   .hero .container .hero-content h5 {
+    text-align: center;
+    max-width:90%;    /* full width */
+    margin: 8px auto 0; /* slight gap below h4 */
+    display: block;
+    font-size: clamp(25px, 5vw, 42px); /* bold, large scaling */
+    font-weight: 800;
+    line-height: 100%;   /* compact spacing */
+    letter-spacing: -2px;
+  }
+    .hero .container .hero-content h6 {
+    text-align: center;
+    max-width:100%;    /* full width */
+    margin: 10px auto 0; /* slight gap below h4 */
+    display: block;
+    font-size: clamp(15, 5vw, 42px); /* bold, large scaling */
+    font-weight: 800;
+    line-height: 100%;   /* compact spacing */
+    letter-spacing: 5px;
+    font-family: 'Montserrat';
+  }
+
+  .hero .hero-background {
+    background: url("../../assets/img/hero-window-mobile.webp") no-repeat center center / cover;
+  }
+
+
+  .hero-carousel {
+    position: absolute;
+    top: 8%;
+    left: 0;
+    width: 100vw;
+    z-index: 5;
+  }
+
+  .hero-carousel .item img {
+    /* width: 50vw;
+    height: auto; */
+    display: block;
+
+    /* height: 130px; */
+    object-fit: fill;   /* Crop image to fit */
+    width: 100%;  
+    border-radius: 10px;
+  }
+
+  .hero-container {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .hero-content {
+    margin-top: 180px !important;
+    text-align: center;
+  }
+
+  .contact-form {
+    margin-top: 20px;
+  }
+}
+
 
 @media screen and (max-width: 767px) {
   .hero {
@@ -1234,7 +1367,7 @@ section,
   display: inline-block;
   border: 2px solid #fff;
   border-radius: 12px;
-  padding: 16px 40px;
+  padding: 8px 20px;
   text-align: center;
   text-transform: uppercase;
   font-weight: 700;
@@ -1260,9 +1393,12 @@ section,
 }
 
 @media (max-width: 575px) {
+  .hero .hero-content .hero-btns {
+    margin-top: 10px;
+}
   .hero .hero-content .hero-btns .cta-btn {
-    padding: 12px 20px;
-    width: 100%;
+    padding: 5px 10px;
+    width: 80%;
     max-width: 320px;
   }
 
@@ -1271,7 +1407,7 @@ section,
   }
 
   .hero .hero-content .hero-btns .cta-btn .big-text {
-    font-size: 28px;
+    font-size: 20px;
   }
 }
 
@@ -1479,7 +1615,7 @@ form button.btn:hover {
   transform: translateY(-50%);
   width: 20px;
   height: 20px;
-  background: url('../../assets/img/why-us/icon.svg') no-repeat center;
+  background: url('../../assets/img/why-us/fi_722320.svg') no-repeat center;
   background-size: contain;
 }
 
@@ -1627,6 +1763,14 @@ form button.btn:hover {
   flex-direction: column;
   justify-content: space-between;
   transition: ease-in-out 0.3s;
+}
+
+@media (max-width: 767px) {
+  .services .service-item {
+    width: 90%;
+    margin: 0 auto;   /* centers horizontally */
+    display: block;   /* make sure it's treated as a block */
+}
 }
 
 /* .services .service-item:hover {
@@ -1822,6 +1966,67 @@ form button.btn:hover {
   flex-shrink: 0;
 }
 
+/*--------------------------------------------------------------
+# Advantages Section - Mobile
+--------------------------------------------------------------*/
+@media (max-width: 767px) {
+  .advantages {
+    padding: 30px 15px; /* add breathing room */
+    text-align: center; /* center titles & text */
+  }
+
+  .advantages h4 {
+    font-size: 14px;
+    letter-spacing: 6px; /* smaller tracking */
+    line-height: 140%;
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+
+  .advantages p {
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 20px;
+    color: #232F3A;
+  }
+
+  .advantages ul {
+    padding-left: 0;     /* remove default padding */
+    margin: 0 auto 25px; /* center list */
+    max-width: 95%;
+  }
+
+  .advantages ul li {
+    display: flex;
+    align-items: flex-start;
+    text-align: left;    /* keep text aligned with icons */
+    margin-bottom: 16px;
+    margin-top:20px;
+  }
+
+  .advantages ul li i.checkmark {
+    margin-right: 10px;  /* space between icon & text */
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 17px;
+    height: 17px;
+    min-width: 24px;
+    color: #fff;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .advantages .btn {
+    display: block;
+    width: 100%;
+    padding: 14px 0;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Call To Action Section
@@ -1908,7 +2113,7 @@ form button.btn:hover {
   position: relative;
   z-index: 2;
   color: #fff;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .gallery .gallery-content {
@@ -1918,11 +2123,11 @@ form button.btn:hover {
 
 .gallery .gallery-content h4 {
   letter-spacing: 13.8px;
-  font-size: 20px;
+  font-size: 18px;
   font-family: "Montserrat";
   line-height: 130%;
-  color: #093C70;
-  font-weight: 200;
+  color: #FFF;
+  font-weight: 300;
   text-transform: uppercase;
 }
 
@@ -1966,21 +2171,34 @@ form button.btn:hover {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+  
   .gallery {
     padding: 40px 0;
   }
+  .gallery .gallery-content h4 {
+    font-size: clamp(19px, 6vw, 26px);
+    letter-spacing: clamp(8px, 2vw, 13.8px);
+    font-family: "Montserrat";
+    line-height: 130%;
+    color: #FFF;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
 
-  .gallery .gallery-content h2,
+
+  .gallery .gallery-content h2{
+    width: 90%;
+    margin: 0 auto;   /* centers horizontally */
+    display: block;   /* make sure it's treated as a block */
+  }
+
   .gallery .gallery-content h1 {
     font-size: 2rem;
     letter-spacing: -1px;
   }
 
-  .gallery .gallery-content h4 {
-    font-size: 14px;
-    letter-spacing: 8px;
-  }
+  
 
   .gallery .gallery-content p {
     font-size: 1rem;
@@ -2003,13 +2221,19 @@ form button.btn:hover {
     padding: 15px;
   }
 
-  .gallery .gallery-content h2,
+   .gallery .gallery-content h2{
+    width: 90%;
+    margin: 0 auto;   /* centers horizontally */
+    display: block;   /* make sure it's treated as a block */
+    font-size: 30px;
+  }
+
   .gallery .gallery-content h1 {
     font-size: 1.75rem;
   }
 
   .gallery .gallery-content h4 {
-    font-size: 12px;
+    font-size: 16px;
     letter-spacing: 5px;
   }
 
@@ -2060,13 +2284,21 @@ form button.btn:hover {
   .testimonials h4 {
     font-size: 16px;
     text-align: center;
-    letter-spacing: 5px;
+    letter-spacing: 9px;
+    font-weight: 600;
+    width: 100%;
+    margin: 0 auto;   /* centers horizontally */
+    display: block;   /* make sure it's treated as a block */
   }
 
   .testimonials h2 {
-    font-size: 28px !important;
+    font-size: 30px !important;
     text-align: center;
     letter-spacing: -1px;
+    width: 95%;
+    margin: 0 auto;   /* centers horizontally */
+    display: block;   /* make sure it's treated as a block */
+    /* font-size: 30px; */
   }
 }
 
@@ -2245,15 +2477,21 @@ form button.btn:hover {
   .contact-section h2 {
     font-size: 22px;
     line-height: 120%;
+
+    text-align: center;
+    max-width: 100%;       /* use max-width instead of fixed width */
+    margin: 0 auto;       /* centers the block itself */
+    display: block;
   }
 
   .contact-section h4 {
-    font-size: 14px;
+    font-size: 15px;
     margin-bottom: 10px;
+    margin-top: 10px;
   }
 
   .contact-section .btn-number {
-    font-size: 28px;
+    font-size: 33px;
   }
 
   .contact-section .btn-text {
@@ -2264,6 +2502,23 @@ form button.btn:hover {
     font-size: 15px;
     padding: 14px;
   }
+
+    .contact-section .hero-btns {
+    margin-top: 10px;
+  }
+    .contact-section .hero-btns .cta-btn {
+      padding: 5px 10px;
+      width: 100%;
+      max-width: 370px;
+    }
+
+    /* .contact-section .hero-btns .cta-btn .small-text {
+      font-size: 14px;
+    }
+
+    .contact-section .hero-btns .cta-btn .big-text {
+      font-size: 35px;
+    } */
 }
 
 /*--------------------------------------------------------------
