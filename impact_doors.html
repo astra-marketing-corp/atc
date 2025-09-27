@@ -59,8 +59,8 @@
         <!-- Location Badge -->
         <div class="col-md-4 d-flex align-items-center">
           <span class="badge location text-uppercase montserrat-400 fw-normal">
-            <i class="bi bi-geo-alt-fill me-1" style="color:#eba126"></i>
-            <span id="location">Miami, Florida</span>
+            <i class="bi bi-geo-alt-fill me-1"></i>
+            <span id="location">Miami</span>
           </span>
         </div>
 
@@ -74,13 +74,12 @@
 
         <!-- Call To Action -->
         <div class="col-md-4 d-flex justify-content-end text-end">
-          <a href="#" class="header-cta-btn text-decoration-none">
+          <a href="tel:+17863679157" class="header-cta-btn text-decoration-none">
             <div>
               <span class="badge promotion text-uppercase text-end mb-1">15% off call now</span>
-              
             </div>
 
-            <h3 class="montserrat-700 fw-bold text-uppercase" style="color:#2c2967;">
+            <h3 class="text-uppercas phone-number" style="color:#2c2967;">
               CALL (305) 362-1405
             </h3>
           </a>
@@ -94,29 +93,28 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero section">
-      <div class="hero-background">
+      <div class="hero-background-2">
         <div class="hero-overlay"></div>
       </div><!-- Hero Background -->
 
-      <div class="owl-carousel hero-carousel d-block d-md-none">
+       <div class="owl-carousel hero-carousel d-block d-md-none">
         <div class="item">
-          <img src="assets/img/image-sliders/slider-1.webp" alt="Owl Carousel">
+          <img src="assets/img/image-sliders/doors/slider-1.webp" alt="Owl Carousel">
         </div>
         <div class="item">
-          <img src="assets/img/image-sliders/slider-2.webp" alt="Owl Carousel">
+          <img src="assets/img/image-sliders/doors/slider-2.webp" alt="Owl Carousel">
         </div>
         <div class="item">
-          <img src="assets/img/image-sliders/slider-3.webp" alt="Owl Carousel">
+          <img src="assets/img/image-sliders/doors/slider-3.webp" alt="Owl Carousel">
         </div>
         <div class="item">
-          <img src="assets/img/image-sliders/slider-4.webp" alt="Owl Carousel">
+          <img src="assets/img/image-sliders/doors/slider-4.webp" alt="Owl Carousel">
         </div>
         <div class="item">
-          <img src="assets/img/image-sliders/slider-5.webp" alt="Owl Carousel">
+          <img src="assets/img/image-sliders/doors/slider-5.webp" alt="Owl Carousel">
         </div>
       </div><!-- End Owl Carousel: Mobile Image Slider -->
 
-      <!-- Hero Content -->
       <div class="container mt-5">
         <div class="row justify-content-center text-center">
           <div class="col-lg-10">
@@ -125,11 +123,11 @@
                 class="d-block d-md-none d-flex align-items-center justify-content-center text-center text-uppercase montserrat-400 fw-normal">
                 <span class="badge">
                   <i class="bi bi-geo-alt-fill me-1"></i>
-                  <span id="location">Miami Florida</span>
+                  <span id="location">Miami</span>
                 </span>
               </div>
 
-              <h4 class="montserrat-400 text-white text-uppercase mt-2">Hurricane-Strength Security Tailored to Your Style</h4>
+              <h4 class="text-white text-uppercase">Hurricane-Strength Security Tailored to Your Style</h4>
               <h1>Impact Doors That Protect & Beautify Your Home</h1>
 
               <div class="hero-btns mb-4">
@@ -142,76 +140,70 @@
               <hr>
 
               <div class="text-center mt-4">
-                <h5 class="montserrat-700 fw-bold fs-2 text-uppercase text-white">Do you have the right measures?</h5>
-                <h6 class="fw-semibold fs-5 text-uppercase text-white">Call us for a FREE Estimate</h6>
+                <h5 class="text-uppercase">Do you have the right measures?</h5>
+                <h6 class="text-uppercase">Call us for a FREE Estimate</h6>
               </div>
             </div>
           </div>
         </div><!-- Hero Contetn -->
 
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <form action="forms/request-form.php" method="POST"
-            class="contact-form row g-3">
-
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="full_name" class="form-label text-uppercase">Name</label>
-                <input type="text" id="full_name" class="form-control" name="full_name" required>
+        <div class="row justify-content-center">
+          <div class=" col-lg-8">
+            <form action="https://aquapropc.com/aquapro-lp/forms/request-form.php" method="POST"
+              class="contact-form row g-3">
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control" name="full_name" placeholder="Your full name" required>
+                  <label>Full name</label>
+                </div>
               </div>
-            </div>
-
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="email" class="form-label text-uppercase">Email address</label>
-                <input type="email" id="email" class="form-control" name="email"  required>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="email" class="form-control" name="email" placeholder="name@example.com" required>
+                  <label>Email address</label>
+                </div>
               </div>
-            </div>
-
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="phone" class="form-label text-uppercase">Phone number</label>
-                <input type="tel" id="phone" class="form-control" name="phone"  required>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="tel" class="form-control" name="phone" placeholder="Your phone number" required>
+                  <label>Phone number</label>
+                </div>
               </div>
-            </div>
-
-            <div class="col-md-6">
-              <div class="form-group">
-                <label for="service" class="form-label text-uppercase">Select a service</label>
-                <select id="service" class="form-select" name="service" required>
-                  <option value="" disabled selected>Select a service</option>
-                  <option value="Impact Doors">Impact Doors</option>
-                </select>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <select class="form-select" name="service" required>
+                    <option value="" disabled selected>Select a service</option>
+                    <option value="Impact Doors">Impact Doors</option>
+                  </select>
+                  <label>Select a service</label>
+                </div>
               </div>
-            </div>
+              <div class="col-12">
+                <button type="submit"
+                  class="btn montserrat-700 text-uppercase text-white fs-5 w-100 d-flex align-items-center justify-content-center text-center">
+                  Get Help Now
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                    <g clip-path="url(#clip0_296_880)">
+                      <path
+                        d="M14.3117 9.6767L3.03678 16.1282C1.94321 16.7531 0.659276 15.6742 1.0889 14.4903L3.25403 8.5002L1.0889 2.51001C0.659276 1.32363 1.94321 0.247196 3.03678 0.872071L14.3117 7.32357C15.2245 7.84351 15.2222 9.15676 14.3117 9.6767Z"
+                        fill="white" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_296_880">
+                        <rect width="16" height="16" fill="white" transform="translate(0 0.5)" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </button>
+                <p class="montserrat-400 fw-normal text-white text-center mt-2">
+                  All of your personal information is stored in a safe location.
+                </p>
+              </div>
+            </form>
+          </div>
+        </div><!-- Contact Form -->
 
-            <div class="col-12">
-              <button type="submit"
-                class="btn montserrat-700 text-uppercase text-white fs-5 w-100 d-flex align-items-center justify-content-center text-center">
-                Get Help Now
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
-                  <g clip-path="url(#clip0_296_880)">
-                    <path
-                      d="M14.3117 9.6767L3.03678 16.1282C1.94321 16.7531 0.659276 15.6742 1.0889 14.4903L3.25403 8.5002L1.0889 2.51001C0.659276 1.32363 1.94321 0.247196 3.03678 0.872071L14.3117 7.32357C15.2245 7.84351 15.2222 9.15676 14.3117 9.6767Z"
-                      fill="white" />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_296_880">
-                      <rect width="16" height="16" fill="white" transform="translate(0 0.5)" />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </button>
-              <p class="montserrat-400 fw-normal text-white text-center mt-2">
-                All of your personal information is stored in a safe location.
-              </p>
-            </div>
-          </form>
-        </div>
-      </div>
-<!-- Contact Form -->
-
-      </div>
+      </div><!-- Hero Content -->
     </section><!-- End Hero Section -->
 
     <!-- Why Choose Section -->
@@ -220,14 +212,14 @@
         <div class="row align-items-center g-5">
           <div class="col-md-6">
             <div class="p-0">
-              <h4 class="text-uppercase">Why Choose Us?</h4>
+              <h4 class="text-uppercase">Why Trust Us?</h4>
               <h1 class="text-uppercase">
                 Protecting Your Home Starts at the Door
               </h1>
-              <p>ATC Shutters designs and installs impact doors that safeguard your home while adding beauty, security, and efficiency.</p>
+              <!-- <p>ATC Shutters designs and installs impact doors that safeguard your home while adding beauty, security, and efficiency.</p> -->
             </div>
 
-            <ul>
+             <ul>
                <li>First line of defense against hurricanes and intruders</li>
               <li>Reinforced frames and impact-resistant glass for 24/7 protection</li>
               <li>Prevents dangerous wind pressure, flooding, and costly damage</li>
@@ -243,7 +235,7 @@
             </p> -->
 
             <a href="#" class="btn btn-secondary rounded-2 text-uppercase">
-              Book a Service Call <i class="fa fa-play"></i></a>
+              15% off call now <i class="fa fa-play"></i></a>
             </a>
           </div><!-- Left Column (content) -->
 
@@ -262,15 +254,16 @@
 
       <!-- Section Title -->
       <div class="container section-title">
-        <h4 class="text-uppercase">Our Services</h4>
+       
         <h1 class="text-uppercase">
-          Our Impact Doors
+           HOW WE HELP
         </h1>
-       <p>We offer a full range of hurricane-rated impact doors designed to protect your home while upgrading its style and functionality</p>
-     
+         <h4 class="text-uppercase">Our Services:</h4>
+         <p>We offer a full range of hurricane-rated impact doors designed to protect your home while upgrading its style and functionality. </p>
+      
       </div><!-- End Section Title -->
 
-     <div class="container">
+      <div class="container">
 
         <div class="row d-flex flex-wrap align-items-center justify-content-center gy-4">
 
@@ -355,6 +348,7 @@
 
       </div>
 
+
     </section><!-- End Services Section -->
 
     <!-- Advantages Section -->
@@ -370,50 +364,51 @@
 
           <!-- Right Column (content) -->
           <div class="col-md-6">
-            <h4 class="montserrat-400 fs-5 text-uppercase">Benefits &amp; Advantages</h4>
+            <!-- <h4 class="montserrat-400 fs-5 text-uppercase">Benefits &amp; Advantages</h4> -->
+            <h4 class="montserrat-400 fs-5 text-uppercase">Pros of using ATC</h4>
             <h2 class="montserrat-700 text-uppercase fs-1 fw-bold">Why South Florida Homeowners Choose ATC Shutters</h2>
             <!-- <p>Aqua Pro offers full-service video inspections across the Greater Miami Area:</p> -->
 
-            <h5 class="archivo-500 fw-semibold fs-5 mb-4 d-none">Advantages You’ll Enjoy:</h5>
+           <h5 class="archivo-500 fw-semibold fs-5 mb-4 d-none">Advantages You’ll Enjoy:</h5>
 
-             <ul class="list-unstyled mb-4">
-              <li class="d-flex align-items-start fw-bold text-dark mb-3">
+           <ul class="list-unstyled mb-4">
+              <li class="d-flex align-items-start manrope-600 text-dark mb-3">
                 <i class="checkmark me-2 mt-1"></i>
                 <div>
-                  30+ Years of Experience:
-                  <span class="fw-semibold d-block">Experts in hurricane impact door installation</span>
+                  <p class="montserrat-700 text-uppercase mb-0">30+ Years of Experience:</p>
+                  <span class="montserrat-400 fw-normal fs-5 d-block">Experts in hurricane impact door installation.</span>
                 </div>
               </li><!-- Advantage One -->
 
-              <li class="d-flex align-items-start fw-bold text-dark mb-3">
+              <li class="d-flex align-items-start manrope-600 text-dark mb-3">
                 <i class="checkmark me-2 mt-1"></i>
                 <div>
-                  Trusted & Respected:
-                  <span class="fw-semibold d-block">A leading name in South Florida home protection</span>
+                  <p class="montserrat-700 text-uppercase mb-0">Trusted & Respected:</p>
+                  <span class="montserrat-400 fw-normal fs-5 d-block">A A leading name in South Florida home protection.</span>
                 </div>
               </li><!-- Advantage Two -->
 
-              <li class="d-flex align-items-start fw-bold text-dark mb-3">
+              <li class="d-flex align-items-start manrope-600 text-dark mb-3">
                 <i class="checkmark me-2 mt-1"></i>
                 <div>
-                  Solutions for Every Budget:
-                  <span class="fw-semibold d-block">High-quality products without compromise</span>
+                  <p class="montserrat-700 text-uppercase mb-0">Solutions for Every Budget:</p>
+                  <span class="montserrat-400 fw-normal fs-5 d-block">High-quality products without compromise</span>
                 </div>
               </li><!-- Advantage Three -->
 
-              <li class="d-flex align-items-start fw-bold text-dark mb-3">
+              <li class="d-flex align-items-start manrope-600 text-dark mb-3">
                 <i class="checkmark me-2 mt-1"></i>
                 <div>
-                  Fabrication + Installation:
-                  <span class="fw-semibold d-block">Quality control from start to finish</span>
+                  <p class="montserrat-700 text-uppercase mb-0">Fabrication + Installation:</p>
+                  <span class="montserrat-400 fw-normal fs-5 d-block">Quality control from start to finish</span>
                 </div>
               </li><!-- Advantage Four -->
 
-              <li class="d-flex align-items-start fw-bold text-dark mb-3">
+              <li class="d-flex align-items-start manrope-600 text-dark mb-3">
                 <i class="checkmark me-2 mt-1"></i>
                 <div>
-                  Tested & Certified Protection:
-                  <span class="fw-semibold d-block">Built to withstand South Florida’s toughest conditions</span>
+                  <p class="montserrat-700 text-uppercase mb-0">Tested & Certified Protection:</p>
+                  <span class="montserrat-400 fw-normal fs-5 d-block">Built to withstand South Florida’s toughest conditions</span>
                 </div>
               </li><!-- Advantage Five -->
             </ul><!-- List Of Advantages -->
@@ -436,13 +431,13 @@
         <div class="row justify-content-center text-center">
           <div class="col-12">
             <div class="gallery-content mb-5">
-              <h4>Previous Work</h4>
-              <h2 class="">Real Results for Real Customers</h2>
+              <!-- <h4 class="montserrat-400 text-white text-uppercase">Previous Work</h4> -->
+              <h2 class="text-uppercase text-white">VIEW OUR RESULTS</h2>
             </div>
           </div>
 
           <!-- Gallery -->
-          <div class="col-12">
+           <div class="col-12">
             <div class="row g-4 justify-content-center">
               <!-- First row (3 images) -->
                <div class="col-md-4 col-sm-6">
@@ -478,26 +473,23 @@
       <div class="container">
         <div class="row justify-content-center text-start mb-4">
           <div class="col-lg-8 mb-4">
-            <h4 class="montserrat-400 fs-5 text-uppercase">Testimonials</h4>
-            <h2 class="montserrat-700 text-uppercase fs-1 fw-bold">What Our Customers Say</h2>
+            <!-- <h4 class="montserrat-400 fs-5 text-uppercase">Testimonials</h4> -->
+            <h2 class="montserrat-700 text-uppercase fs-1 fw-bold">CHECK OUR REVIEWS</h2>
           </div>
 
           <div class="col-md-4 col-lg-4">
             <div class="card h-100 shadow-sm border-1 rounded-4 p-4">
               <p class="testimonial-text mb-4">
-                We recently bought a home and knew that the pipes needed some work. From the get-go, aqua pro was timely
-                and professional. They ended up lining the pipes for us. Ernesto was the team lead for our job and
-                throughout the process he was very communicative and explained each step. The whole crew was respectful,
-                cleaned up after their work, and even took off their shoes to walk in the house. I have to give credit
-                to Luis and Danny because one night they stayed late to work (past 8pm) so we could have a toilet to use
-                that night. But honestly everyone on the team was awesome (Ernesto, Alex, Luis, and Danny) I was
-                definitely nervous to commit to a company for such a big job, but they delivered and the crew was great!
+                Great Beautiful Door from ATC. What a great experience working with ATC,
+                from start to finish nothing but excellent customer service from David, Claudia, and Eladio . 
+                It’s difficult these days to find a great company, a great product And excellent customer service. 
+                Do yourself a favor and give them a call and your business, you’ll not be disappointed. Thank you ATC!!
               </p>
               <button class="btn btn-link text-decoration-none text-primary text-start p-0 read-more-btn mt-0">
                 Read more
               </button>
 
-              <h6 class="fw-bold text-uppercase mt-3 mb-1">Jesse Fisher</h6>
+              <h6 class="fw-bold text-uppercase mt-3 mb-1">Frank Gonzalez</h6>
               <div class="text-warning">
                 <i class="bi bi-star-fill"></i>
                 <i class="bi bi-star-fill"></i>
@@ -514,20 +506,14 @@
           <div class="col-md-6 col-lg-4">
             <div class="card h-100 shadow-sm border-1 rounded-4 p-4">
               <p class="testimonial-text mb-4">
-                Victor did a great job repairing a watermain line break that another company did completely incorrect.
-                He also quickly identified and fixed a low water pressure issue in kitchen. Aqua pro workers are always
-                professional and do great work on multiple jobs I have had done on property. I highly recommend them for
-                any plumbing/sewer work you need done..Update. 11/08/24 Yanelis , Yoel and Peter(owner) were all very
-                helpful and professional in helping me get a septic pump.out done. Again I highly recommend Aquapro for
-                plumbing/septic needs 11/2023...Victor and his crew did a fantastic job. They were very professional,
-                and extremely efficient. Peter and Aquapro home office was very quick to assist with any questions. I
-                highly recommend them for any plumbing/septic work you may need.
+                Beyond happy with my new doors ! From start to finish the job was seamless. 
+                I definitely recommend this company! Can't wait to get my windows next !
               </p>
               <button class="btn btn-link text-decoration-none text-primary text-start p-0 read-more-btn mt-0">
                 Read more
               </button>
 
-              <h6 class="fw-bold text-uppercase mt-3 mb-1">Jesse Fisher</h6>
+              <h6 class="fw-bold text-uppercase mt-3 mb-1">angelica escobar</h6>
               <div class="text-warning">
                 <i class="bi bi-star-fill"></i>
                 <i class="bi bi-star-fill"></i>
@@ -542,19 +528,22 @@
           <div class="col-md-6 col-lg-4">
             <div class="card h-100 shadow-sm border-1 rounded-4 p-4">
               <p class="testimonial-text mb-4">
-                We recently bought a home and knew that the pipes needed some work. From the get-go, aqua pro was timely
-                and professional. They ended up lining the pipes for us. Ernesto was the team lead for our job and
-                throughout the process he was very communicative and explained each step. The whole crew was respectful,
-                cleaned up after their work, and even took off their shoes to walk in the house. I have to give credit
-                to Luis and Danny because one night they stayed late to work (past 8pm) so we could have a toilet to use
-                that night. But honestly everyone on the team was awesome (Ernesto, Alex, Luis, and Danny) I was
-                definitely nervous to commit to a company for such a big job, but they delivered and the crew was great!
+                I am beyond satisfied and pleased with my new door and impact/casement windows.
+                Our home looks stunning!
+                The whole process took over 6 months due to the multiple requirements from the city where I live (Coral Gables).
+                But the wait was totally worthy.
+                I’m very happy with the level of professionalism and high values the owner and all employees conducted themselves with.
+                I have tried to get new windows for years.
+                I had quotes and prior contracts with 3 different companies that were around same price or more expensive, but that had questionable ethics, nothing materialized, so I was wary to use a local company.
+                My neighbor used their services and recommended them, and to my surprise, ATC demonstrated being the best option available in value, service and quality of the product.
+                They went above and beyond the contract/agreement and for that, I cannot thank them enough.
+                I highly recommend them.
               </p>
               <button class="btn btn-link text-decoration-none text-primary text-start p-0 read-more-btn mt-0">
                 Read more
               </button>
 
-              <h6 class="fw-bold text-uppercase mt-3 mb-1">Jesse Fisher</h6>
+              <h6 class="fw-bold text-uppercase mt-3 mb-1">Emma Galtes</h6>
               <div class="text-warning">
                 <i class="bi bi-star-fill"></i>
                 <i class="bi bi-star-fill"></i>
@@ -569,19 +558,14 @@
           <div class="col-md-6 col-lg-4">
             <div class="card h-100 shadow-sm border-1 rounded-4 p-4">
               <p class="testimonial-text mb-4">
-                We recently bought a home and knew that the pipes needed some work. From the get-go, aqua pro was timely
-                and professional. They ended up lining the pipes for us. Ernesto was the team lead for our job and
-                throughout the process he was very communicative and explained each step. The whole crew was respectful,
-                cleaned up after their work, and even took off their shoes to walk in the house. I have to give credit
-                to Luis and Danny because one night they stayed late to work (past 8pm) so we could have a toilet to use
-                that night. But honestly everyone on the team was awesome (Ernesto, Alex, Luis, and Danny) I was
-                definitely nervous to commit to a company for such a big job, but they delivered and the crew was great!
+                Sharing my experience in purchasing a French door with this company, the service was excellent.
+                The girls at the office processed everything super fast without wasting valuable time. I recommend them.
               </p>
               <button class="btn btn-link text-decoration-none text-primary text-start p-0 read-more-btn mt-0">
                 Read more
               </button>
 
-              <h6 class="fw-bold text-uppercase mt-3 mb-1">Jesse Fisher</h6>
+              <h6 class="fw-bold text-uppercase mt-3 mb-1">Vladimir Castillo</h6>
               <div class="text-warning">
                 <i class="bi bi-star-fill"></i>
                 <i class="bi bi-star-fill"></i>
@@ -604,13 +588,13 @@
               <img src="assets/img/footer/footer-logo.webp" width="140" height="100" alt="Logo">
             </div><!-- Logo -->
             <h2 class="text-uppercase">
-             About ATC Shutters
+              About ATC Shutters
             </h2>
-            <p class="montserrat-400 text-white fs-6">
-               At ATC Shutters, we build and install quality products that fit your needs. Call us today to schedule your free impact door consultation.
+            <p class="text-white fs-6">
+             At ATC Shutters, we build and install quality products that fit your needs. Call us today to schedule your free impact door consultation.
 
             </p>
-              <div class="hero-btns mb-4">
+            <div class="hero-btns mb-4">
               <a href="tel:+17863679157" class="btn btn-outline-light cta-btn">
                 <span class="btn-text">CALL US TODAY!</span><br>
                 <span class="btn-number">CALL (305) 362-1405</span>
@@ -624,9 +608,9 @@
               Do you have the right measures?
             </h2>
             <h4 class="text-uppercase text-center">
-               Call us for a FREE Estimate
+              Call us for a FREE Estimate
             </h4>
-            <form action="forms/request-form.php" method="POST"
+            <form action="https://aquapropc.com/aquapro-lp/forms/request-form.php" method="POST"
               class="contact-form row g-3">
               <div class="col-md-6">
                 <div class="form-floating">
@@ -734,7 +718,7 @@
             margin: -7
           },
           768: {
-            items: 2,
+            items: 3,
             center: false
           },
           1024: {

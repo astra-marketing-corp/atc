@@ -598,7 +598,13 @@ h6 {
 /* -------------------
    RESPONSIVE FIXES
 ------------------- */
-
+.header .phone-number {
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  white-space: nowrap;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  font-family: 'Montserrat';
+}
 /* Tablet and up keep same as desktop (no changes) */
 /* Mobile screens */
 @media (max-width: 767px) {
@@ -640,25 +646,65 @@ h6 {
 
   .header .header-cta-btn h3 {
     color: #2c2967;
-    font-size: clamp(23px, 5vw, 26px); /* bigger, fluid */
-    font-weight: 1000;
+    font-size: clamp(22px, 5vw, 25px); /* bigger, fluid */
+    font-weight: 700;
     letter-spacing: -1px;
     /* margin: 1px 0; */
+    font-family:  "Montserrat", sans-serif;
   }
 
 .header .header-cta-btn .badge.promotion {
   font-size: clamp(14px, 4vw, 16px);
   padding: 1px 14px;   /* less top/bottom, more left/right */
-  font-weight: bold;
+  font-weight: 700;
   line-height: 130%;
   display: inline-block;
   margin: 6px auto 6px 0;
   border-radius: 20px;  /* keeps it pill-shaped */
 }
 
+.header .phone-number {
+    font-size: clamp(1.45rem, 6vw, 2rem) !important;
+    white-space: nowrap;
+    letter-spacing: -1px;
+    font-family:  "Montserrat", sans-serif;
+    font-weight: 700;
+    line-height: 100%;
+
+  }
+  /* For very small screens like iPhone SE */
+  @media (max-width: 375px) {
+    .header .phone-number {
+      font-size: clamp(1rem, 5vw, 1.4rem) !important;
+      letter-spacing: -1px;
+    }
+    
+    .header .container-fluid {
+      padding: 2px 8px; /* Add a bit more side padding */
+    }
+     .header .header-cta-btn .badge.promotion {
+      font-size: clamp(10px, 3.2vw, 12px);
+      padding: 2px 8px;
+      margin: 3px auto 3px 0;
+    }
+  }
+
+  /* Optional: Reduce container padding on very small screens */
+  @media (max-width: 360px) {
+    .header .phone-number {
+      font-size: clamp(1.2rem, 5.5vw, 1.6rem) !important;
+    }
+    .header .header-cta-btn .badge.promotion {
+    font-size: clamp(10px, 3.2vw, 12px);
+    padding: 2px 8px;
+    margin: 3px auto 3px 0;
+    white-space: nowrap;
+  }
+  }
+  
 
 }
-
+/*  */
 
 
 /* Global Header on Scroll */
@@ -998,7 +1044,7 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
+  padding: 20px 0;
   scroll-margin-top: 90px;
   overflow: clip;
 }
@@ -1164,7 +1210,7 @@ section,
 }
 
 .hero .hero-content .badge {
-  margin-top: 40px;
+  /* margin-top: 20px; */
   padding: 10px 24px;
   border-radius: 500px;
   background: rgba(255, 255, 255, 0.10);
@@ -1184,48 +1230,6 @@ section,
     padding-top: 20px;
     padding-bottom: 20px;
   } 
-  .hero .container .hero-content h4 {
-    text-align: center;
-    max-width: 90%;    /* full width */
-    margin: 0 auto;
-    display: block;
-    font-size: clamp(17 px, 2vw, 18px);  /* smaller subtitle size */
-    font-weight: 400;   /* lighter look */
-    letter-spacing: 32%; /* wide spacing like in image */
-    line-height: 110%;   /* tighter spacing */
-  }
-
-  .hero .container .hero-content h1 {
-    text-align: center;
-    max-width: 93%;    /* full width */
-    margin: 8px auto 0; /* slight gap below h4 */
-    display: block;
-    font-size: clamp(25px, 5vw, 42px); /* bold, large scaling */
-    font-weight: 800;
-    line-height: 1.2;   /* compact spacing */
-  }
-
-   .hero .container .hero-content h5 {
-    text-align: center;
-    max-width:90%;    /* full width */
-    margin: 8px auto 0; /* slight gap below h4 */
-    display: block;
-    font-size: clamp(25px, 5vw, 42px); /* bold, large scaling */
-    font-weight: 800;
-    line-height: 100%;   /* compact spacing */
-    letter-spacing: -2px;
-  }
-    .hero .container .hero-content h6 {
-    text-align: center;
-    max-width:100%;    /* full width */
-    margin: 10px auto 0; /* slight gap below h4 */
-    display: block;
-    font-size: clamp(15, 5vw, 42px); /* bold, large scaling */
-    font-weight: 800;
-    line-height: 100%;   /* compact spacing */
-    letter-spacing: 5px;
-    font-family: 'Montserrat';
-  }
 
   .hero .hero-background {
     background: url("../../assets/img/hero-window-mobile.webp") no-repeat center center / cover;
@@ -1264,8 +1268,9 @@ section,
   }
 
   .contact-form {
-    margin-top: 20px;
+    margin-top: -15px;
   }
+
 }
 
 
@@ -1308,9 +1313,10 @@ section,
 
 @media (max-width: 575px) {
   .hero .hero-content h1 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     letter-spacing: 0;
   }
+  
 }
 
 /* Horizontal line */
@@ -1327,24 +1333,47 @@ section,
 .hero .hero-content h6 {
   text-align: center;
 }
-
+.hero .hero-content h4 {
+  padding-top: 3%;
+  font-size: 1.2rem;
+  font-family : "Montserrat";
+     
+  font-weight: 400;
+  color: #FFF;
+  letter-spacing: 4px;
+}
 .hero .hero-content h5 {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  
+    font-family : "Montserrat";
+    font-weight: 700;
+    color: #FFF;
 }
 
 .hero .hero-content h6 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  font-family : "Montserrat";
+     
+  font-weight: 600;
+  color: #FFF;
   letter-spacing: 4px;
 }
 
 @media (max-width: 575px) {
   .hero .hero-content h5 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    font-family : "Montserrat";
+    font-weight: 700;
+    color: #FFF;
   }
 
   .hero .hero-content h6 {
-    font-size: 1rem;
+    font-size: 1.1rem;
     letter-spacing: 2px;
+     font-family : "Montserrat";
+     
+    font-weight: 600;
+    color: #FFF;
   }
 }
 
@@ -1361,13 +1390,14 @@ section,
     flex-direction: column;
     gap: 1rem;
   }
+  
 }
 
 .hero .hero-content .hero-btns .cta-btn {
   display: inline-block;
   border: 2px solid #fff;
   border-radius: 12px;
-  padding: 8px 20px;
+  padding: 16px 40px;
   text-align: center;
   text-transform: uppercase;
   font-weight: 700;
@@ -1393,12 +1423,9 @@ section,
 }
 
 @media (max-width: 575px) {
-  .hero .hero-content .hero-btns {
-    margin-top: 10px;
-}
   .hero .hero-content .hero-btns .cta-btn {
-    padding: 5px 10px;
-    width: 80%;
+    padding: 12px 20px;
+    width: 100%;
     max-width: 320px;
   }
 
@@ -1407,9 +1434,10 @@ section,
   }
 
   .hero .hero-content .hero-btns .cta-btn .big-text {
-    font-size: 20px;
+    font-size: 28px;
   }
 }
+
 
 /* Contact Form */
 form button.btn {
@@ -1559,7 +1587,7 @@ form button.btn:hover {
 # Why Choose Us Section
 --------------------------------------------------------------*/
 .why-choose-us {
-  padding: 60px 20px !important;
+  padding: 20px 20px !important;
   background-color: #F8F8FF;
 }
 
@@ -1611,10 +1639,10 @@ form button.btn:hover {
   content: "";
   position: absolute;
   left: 0;
-  top: 50%;
+  top: 30%;
   transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
+  width: 23px;
+  height: 23px;
   background: url('../../assets/img/why-us/fi_722320.svg') no-repeat center;
   background-size: contain;
 }
@@ -1659,13 +1687,14 @@ form button.btn:hover {
   }
 
   .why-choose-us h4 {
-    font-size: 16px;
+    font-size: 19px;
     letter-spacing: 5px;
   }
 
   .why-choose-us h1 {
-    font-size: 28px;
+    font-size: 31px;
     letter-spacing: -1px;
+    padding-bottom: 5px;
   }
 
   .why-choose-us p {
@@ -1674,18 +1703,23 @@ form button.btn:hover {
   }
 
   .why-choose-us ul {
-    font-size: 16px;
+    font-size: 20px;
     text-align: left;
     display: inline-block;
   }
 
   .why-choose-us ul li {
-    padding-left: 28px;
+    padding-left: 38px;
     margin-bottom: 8px;
+  }
+  /* Adjust the icon positioning for mobile */
+  .why-choose-us ul li::before {
+    top: 20%; /* Center vertically */
+    transform: translateY(-50%);
   }
 
   .why-choose-us .btn {
-    font-size: 16px;
+    font-size: 18px;
     padding: 12px 24px;
     width: 100%;
     max-width: 280px;
@@ -1694,9 +1728,9 @@ form button.btn:hover {
   }
 
   .why-choose-us img {
-    max-width: 90%;
+    max-width: 100%;
     height: auto;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
   }
 }
 
@@ -1718,6 +1752,7 @@ form button.btn:hover {
   line-height: 100%;
   color: #202124;
   font-weight: Bold;
+  margin-top: 40px;
 }
 
 
@@ -1739,18 +1774,26 @@ form button.btn:hover {
 }
 
 @media screen and (max-width: 767px) {
+
+  .services h1 {
+    font-size: 35px;
+    margin-top: 15px;
+    margin-bottom: -2%;
+  }
+
   .services h4 {
-    font-size: 16px;
+    
+    font-size: 18px;
     letter-spacing: 5px;
   }
 
-  .services h1 {
-    font-size: 28px;
-  }
+  
 
   .services p {
     font-size: 18px;
   }
+
+  
 }
 
 .services .service-item {
@@ -1765,13 +1808,6 @@ form button.btn:hover {
   transition: ease-in-out 0.3s;
 }
 
-@media (max-width: 767px) {
-  .services .service-item {
-    width: 90%;
-    margin: 0 auto;   /* centers horizontally */
-    display: block;   /* make sure it's treated as a block */
-}
-}
 
 /* .services .service-item:hover {
   background-image: linear-gradient(to right, #2c2967, #2c2967);
@@ -1954,6 +1990,7 @@ form button.btn:hover {
   font-weight: 600;
 }
 
+
 .advantages ul li i.checkmark {
   display: flex;
   align-items: center;
@@ -1965,65 +2002,33 @@ form button.btn:hover {
   font-size: 16px;
   flex-shrink: 0;
 }
-
 /*--------------------------------------------------------------
 # Advantages Section - Mobile
 --------------------------------------------------------------*/
-@media (max-width: 767px) {
-  .advantages {
-    padding: 30px 15px; /* add breathing room */
-    text-align: center; /* center titles & text */
+@media screen and (max-width: 767px) {
+
+  .advantages h4,
+  .advantages h2,
+  .advantages p {
+    text-align: center;
   }
 
   .advantages h4 {
-    font-size: 14px;
-    letter-spacing: 6px; /* smaller tracking */
-    line-height: 140%;
-    margin-bottom: 12px;
-    font-weight: 500;
-  }
-
-  .advantages p {
     font-size: 16px;
-    line-height: 150%;
-    margin-bottom: 20px;
-    color: #232F3A;
+    letter-spacing: 0;
+    margin-top: -10%;
   }
 
-  .advantages ul {
-    padding-left: 0;     /* remove default padding */
-    margin: 0 auto 25px; /* center list */
-    max-width: 95%;
+  .advantages h2 {
+    font-size: 26px !important;
   }
 
-  .advantages ul li {
-    display: flex;
-    align-items: flex-start;
-    text-align: left;    /* keep text aligned with icons */
-    margin-bottom: 16px;
-    margin-top:20px;
+  .advantages ul li p {
+    text-align: start;
   }
 
-  .advantages ul li i.checkmark {
-    margin-right: 10px;  /* space between icon & text */
-      display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 17px;
-    height: 17px;
-    min-width: 24px;
-    color: #fff;
-    font-size: 16px;
-    flex-shrink: 0;
-  }
-
-  .advantages .btn {
-    display: block;
+  .advantages a {
     width: 100%;
-    padding: 14px 0;
-    font-size: 18px;
-    font-weight: 700;
-    text-transform: uppercase;
   }
 }
 
@@ -2174,7 +2179,7 @@ form button.btn:hover {
 @media (max-width: 767px) {
   
   .gallery {
-    padding: 40px 0;
+    padding: 20px 0;
   }
   .gallery .gallery-content h4 {
     font-size: clamp(19px, 6vw, 26px);
@@ -2187,19 +2192,15 @@ form button.btn:hover {
   }
 
 
-  .gallery .gallery-content h2{
-    width: 90%;
-    margin: 0 auto;   /* centers horizontally */
-    display: block;   /* make sure it's treated as a block */
-  }
-
   .gallery .gallery-content h1 {
     font-size: 2rem;
     letter-spacing: -1px;
   }
 
+  .gallery .gallery-content h2{
+    font-size: 60px;
+  }
   
-
   .gallery .gallery-content p {
     font-size: 1rem;
     padding: 0 15px;
@@ -2218,14 +2219,12 @@ form button.btn:hover {
 
 @media (max-width: 576px) {
   .gallery {
-    padding: 15px;
+    padding: 10px;
   }
 
    .gallery .gallery-content h2{
-    width: 90%;
-    margin: 0 auto;   /* centers horizontally */
-    display: block;   /* make sure it's treated as a block */
-    font-size: 30px;
+
+    font-size: 50px;
   }
 
   .gallery .gallery-content h1 {
@@ -2292,10 +2291,10 @@ form button.btn:hover {
   }
 
   .testimonials h2 {
-    font-size: 30px !important;
+    font-size: 45px !important;
     text-align: center;
     letter-spacing: -1px;
-    width: 95%;
+    width: 100%;
     margin: 0 auto;   /* centers horizontally */
     display: block;   /* make sure it's treated as a block */
     /* font-size: 30px; */
@@ -2315,7 +2314,7 @@ form button.btn:hover {
 }
 
 .testimonials .card .read-more-btn {
-  margin-top: -5% !important;
+  margin-top: -2% !important;
   color: #093C70 !important;
 }
 
@@ -2461,6 +2460,9 @@ form button.btn:hover {
   .contact-section form select {
     font-size: 14px;
   }
+
+  
+  
 }
 
 @media (max-width: 576px) {
@@ -2471,22 +2473,22 @@ form button.btn:hover {
   }
 
   .contact-section {
-    padding: 30px 10px;
+    padding: 20px 10px;
   }
 
   .contact-section h2 {
-    font-size: 22px;
+    font-size: 35px;
     line-height: 120%;
-
+    margin-top: -2%;
     text-align: center;
-    max-width: 100%;       /* use max-width instead of fixed width */
-    margin: 0 auto;       /* centers the block itself */
-    display: block;
   }
-
+  .contact-section p {
+    font-size: 13px;
+    font-weight: 400;
+  }
   .contact-section h4 {
     font-size: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 35px;
     margin-top: 10px;
   }
 
@@ -2511,7 +2513,7 @@ form button.btn:hover {
       width: 100%;
       max-width: 370px;
     }
-
+    
     /* .contact-section .hero-btns .cta-btn .small-text {
       font-size: 14px;
     }
