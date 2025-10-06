@@ -411,21 +411,33 @@ h6 {
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
+/* =========================================
+   YOUR EXISTING HEADER STYLES - KEPT AS IS
+   ========================================= */
+
+/* Base Header Styles */
 .header {
-  padding: 0 1%;
+  padding:15px 1%;
+  /* Add position fixed for sticky behavior */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
 }
-.header h3{
-  color :#333333;
+
+.header h3 {
+  color: #333333;
 }
 
 .header .container-fluid {
-  /* background: linear-gradient(135deg, #eba126 0%, #f1f1f1 80%); */
   background-color: white;
   border-radius: 16px;
   box-shadow: 0 11px 13.3px rgba(0, 0, 0, 0.25);
   margin-top: 1%;
   padding: 15px 30px;
-  transition: all 0.5s;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 997;
   position: relative;
 }
@@ -438,273 +450,287 @@ h6 {
   flex-wrap: wrap;
 }
 
-/* Location badge */
-.header .badge.location {
-  display: inline-flex;
-  padding: 10px 15px;
-  align-items: center;
-  border-radius: 500px;
-  background:#2c2967;
-  gap: 8px;
-  font-size: 14px;
-  color : #FFF;
-  line-height: 100%;
+
+/* Logo Styles */
+.logo img {
+  height: 80px;
+  width: auto;
+  transition: height 0.3s ease;
 }
-/* Location badge */
-.header .badge.location-2 {
-  display: inline-flex;
-  padding: 10px 14px;
-  align-items: center;
-  border-radius: 500px;
-  background:#eba126;
-  gap: 8px;
-  font-size: 16px;
-  font-weight: 600;
-  color : #FFFF;
-}
-.header .logo {
-  line-height: 1;
-}
-
-/* Logo */
-.header .logo img {
-  max-height: 60px;
-}
-
-/* CTA button block */
-.header .header-cta-btn {
-  text-align: right;
-}
-
-.header .logo h1 {
-  font-size: 30px;
-  margin: 0;
-  font-weight: 700;
-  color: var(--heading-color);
-}
-
-.header .logo h1 span {
-  color: var(--accent-color);
-}
-.header .badge.promotion {
-  background: #eba126;
-  border-radius: 20px;
-  color: #2c2967;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.6px;
-}
-.header .header-cta-btn .badge.promotion {
-  display: inline-block;
-  padding: 2px 15px;
-  background: #eba126;
-  border-radius: 20px;
-  color: #2c2967;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 0.6px;
-}
-
-.header .header-cta-btn h3 {
-  color: #fff;
-  /* font-size: 26px; */
-   font-size: clamp(26px, 6vw, 30px);
-  font-weight: 700;
-  margin: 0;
-  line-height: 1.2;
-}
-
-/* Get Started Button */
-.header .btn-getstarted,
-.header .btn-getstarted:focus {
-  color: var(--contrast-color);
-  background: #19538E;
-  font-family: var(--manrope);
-  font-size: 18px;
-  width: 40%;
-  padding: 8px 60px;
-  margin: 0;
-  border-radius: 50px;
-  transition: 0.3s;
-}
-
-@media screen and (max-width: 1024px) {
-
-  .header .btn-getstarted,
-  .header .btn-getstarted:focus {
-    width: 50%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-
-  .header .btn-getstarted,
-  .header .btn-getstarted:focus {
-    width: 100%;
-  }
-}
-
-.header .btn-getstarted:hover,
-.header .btn-getstarted:focus:hover {
-  color: var(--contrast-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 15%);
-}
-
-.btn-getstarted .top-text {
-  letter-spacing: 5px;
-  font-weight: 400;
-}
-
-.btn-getstarted .tel-number {
-  font-family: var(--archivo-expanded);
-  font-size: 28px;
-}
-
-/* Reorder on large screens */
-@media (max-width: 1200px) {
-  .header .logo {
-    order: 1;
-  }
-
-  .header .btn-getstarted {
-    order: 2;
-    margin: 0 15px 0 0;
-    padding: 6px 20px;
-  }
-
-  .header .navmenu {
-    order: 3;
-  }
-}
-
-/* Hide button on mobile */
-@media screen and (max-width: 767px) {
-  .btn-getstarted {
-    display: none;
-  }
-}
-
-/* Scrolled state */
-.scrolled .header {
-  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
-}
-
-@media screen and (max-width: 767px) {
-  .scrolled .header {
-    box-shadow: none;
-  }
-}
-
-/* -------------------
-   RESPONSIVE FIXES
-------------------- */
-.header .phone-number {
-  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
-  white-space: nowrap;
-  line-height: 1.1;
-  letter-spacing: -0.5px;
-  font-family: 'Montserrat';
-}
-/* Tablet and up keep same as desktop (no changes) */
-/* Mobile screens */
-@media (max-width: 767px) {
-
-  /* Hide location badge */
-  .header .badge.location {
-    display: none;
-  }
-
-  .header .container-fluid {
-    margin-top: 4%;
-    border-radius: 10px;
-    padding: 2px 1%;  /* smaller side padding → closer to edge */
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-  }
-
-  /* Logo section */
-  .header .logo {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  .header .logo img {
-    max-width: 140px;   /* slightly larger */
-    height: auto;
-    
-  }
-
-  /* CTA container */
-  .header .header-cta-btn {
-    text-align: right;
-    width: 100%;
-    padding-right: 5px;
-  }
-
-  .header .header-cta-btn h3 {
-    color: #2c2967;
-    font-size: clamp(22px, 5vw, 25px); /* bigger, fluid */
-    font-weight: 700;
-    letter-spacing: -1px;
-    /* margin: 1px 0; */
-    font-family:  "Montserrat", sans-serif;
-  }
-
-.header .header-cta-btn .badge.promotion {
-  font-size: clamp(14px, 4vw, 16px);
-  padding: 1px 14px;   /* less top/bottom, more left/right */
-  font-weight: 700;
-  line-height: 130%;
-  display: inline-block;
-  margin: 6px auto 6px 0;
-  border-radius: 20px;  /* keeps it pill-shaped */
-}
-
-.header .phone-number {
-    font-size: clamp(1.45rem, 6vw, 2rem) !important;
-    white-space: nowrap;
-    letter-spacing: -1px;
-    font-family:  "Montserrat", sans-serif;
-    font-weight: 700;
-    line-height: 100%;
-
-  }
-  /* For very small screens like iPhone SE */
-  @media (max-width: 375px) {
-    .header .phone-number {
-      font-size: clamp(1rem, 5vw, 1.4rem) !important;
-      letter-spacing: -1px;
-    }
-    
-    .header .container-fluid {
-      padding: 2px 8px; /* Add a bit more side padding */
-    }
-     .header .header-cta-btn .badge.promotion {
-      font-size: clamp(10px, 3.2vw, 12px);
-      padding: 2px 8px;
-      margin: 3px auto 3px 0;
-    }
-  }
-
-  /* Optional: Reduce container padding on very small screens */
-  @media (max-width: 360px) {
-    .header .phone-number {
-      font-size: clamp(1.2rem, 5.5vw, 1.6rem) !important;
-    }
-    .header .header-cta-btn .badge.promotion {
-    font-size: clamp(10px, 3.2vw, 12px);
-    padding: 2px 8px;
-    margin: 3px auto 3px 0;
-    white-space: nowrap;
-  }
+/* CENTER LOGO ON DESKTOP - PROPER WAY */
+@media (min-width: 768px) {
+  /* Make the parent container use grid or flex with equal columns */
+  .header .container-fluid .d-flex {
+    display: grid !important;
+    grid-template-columns: 1fr auto 1fr;  /* Three columns: equal sides, auto center */
+    align-items: center;
   }
   
-
+  /* Left section - Location badge */
+  .header .badge.location {
+    justify-self: start;
+  }
+  
+  /* Center section - Logo */
+  .header .d-none.d-md-flex {
+    justify-self: center;
+  }
+  
+  /* Right section - CTA */
+  .header .header-cta-btn {
+    justify-self: end;
+  }
+  
+  /* Logo Styles */
+  .logo img {
+    height: 80px;
+    width: auto;
+    transition: height 0.3s ease;
+    /* NO MARGIN NEEDED */
+  }
 }
-/*  */
+
+/* Location Badge */
+.badge.location {
+  background-color: #2C286B;
+  color: #FFF;
+  padding: 8px 15px;
+  font-size: 14px;
+  border-radius: 20px;
+  border: 1px solid #e0e0e0;
+  white-space: nowrap;
+}
+
+/* Promotion Badge */
+.badge.promotion {
+  background :#eba126;
+  color: #2c2967;
+  padding: 5px 12px;
+  font-size: 18px;
+  border-radius: 15px;
+  display: inline-block;
+  /* animation: pulse 2s infinite; */
+  /* UPDATED: Added white-space to prevent text breaking */
+  white-space: nowrap;
+}
+
+/* Phone Number */
+.phone-number {
+  font-size: 25px;
+  font-weight: 700;
+  margin: 5px 0 0 0;
+  /* ADDED: Prevent phone number from breaking */
+  white-space: nowrap;
+  line-height: 1.2;
+  color :#2c2967;
+}
+
+/* =========================================
+   NEW MOBILE RESPONSIVE STYLES - ADDED
+   ========================================= */
+
+/* Call to Action Button - ADDED */
+.header-cta-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-decoration: none !important;
+}
+
+/* Mobile Styles - Main Breakpoint */
+@media (max-width: 767px) {
+  /* Hide location badge on mobile - ADDED */
+  .badge.location {
+    display: none !important;
+  }
+  
+  /* Adjust header padding for mobile - MODIFIED */
+  .header {
+    padding: 6px 0;
+  }
+  
+  /* Container padding adjustment - ADDED */
+  .header .container-fluid {
+    padding: 10px 10px;
+  }
+  
+  /* Force single row layout on mobile - ADDED */
+  .header .d-flex {
+    flex-wrap: nowrap !important;
+  }
+  
+  /* Logo section adjustment for mobile - ADDED */
+  .header .col-md-4:nth-child(2) {
+    flex: 0 0 auto;
+    width: auto;
+    display: flex !important;
+    justify-content: flex !important;
+    padding: 0;
+  }
+  
+  /* Hide center logo, show left logo on mobile - ADDED */
+  .header .col-md-4:nth-child(2) {
+    display: none !important;
+  }
+  
+  /* Show logo on left for mobile - ADDED */
+  .header .col-md-4:first-child {
+    flex: 0 0 auto;
+    width: auto;
+    display: flex !important;
+    align-items: center;
+  }
+  
+  /* CTA section right aligned - ADDED */
+  .header .col-md-4:last-child {
+    flex: 0 0 auto;
+    width: auto;
+    display: flex !important;
+    justify-content: flex-end !important;
+    padding: 0;
+  }
+  
+  /* Adjust logo size for mobile - MODIFIED */
+  .logo img {
+    height: 40px;
+  }
+  
+  /* Promotion badge mobile sizing - MODIFIED */
+  .badge.promotion {
+    font-size: 15px;
+    padding: 3px 8px;
+    margin-bottom: 2px;
+    /* ADDED: Change to orange background like in your image */
+    background: #FFA500;
+    color: #2c2967;    
+    font-family: 'Montserrat';
+  }
+  
+  /* Phone number mobile sizing - MODIFIED */
+  .phone-number {
+    font-size: 28px;
+    font-weight: 800;
+    margin: 2px 0 0 0;
+    font-family: 'Montserrat';
+  }
+}
+
+
+
+/* iPhone 14/15 Pro and similar (390px - 393px) - ADDED */
+@media (max-width: 393px) {
+  .header {
+    padding: 7px 0;
+  }
+  
+  .header .container-fluid {
+    padding: 10px 5px;
+  }
+  
+  .logo img {
+    height: 40px;
+  }
+  
+  .badge.promotion {
+    font-size: 13px;  /* 🔴 INCREASE THIS for 390px devices "15% OFF" text */
+    padding: 3px 7px;
+  }
+  
+  .phone-number {
+    font-size: 26px;  /* 🔴 INCREASE THIS for 390px devices phone number */
+  }
+}
+
+
+/* Small mobile devices (360px - 380px) - ADDED */
+@media (max-width: 380px) {
+  .header {
+    padding: 6px 0;
+  }
+  
+  .header .container-fluid {
+    padding: 10px 10px;
+  }
+  
+  .logo img {
+    height: 37px;
+  }
+  
+  .badge.promotion {
+    font-size: 13px;  /* 🔴 INCREASE THIS for 360px devices "15% OFF" text */
+    padding: 3px 6px;
+  }
+  
+  .phone-number {
+    font-size: 25px;  /* 🔴 INCREASE THIS for 360px devices phone number */
+  }
+}
+
+
+@media (max-width: 360px) {
+  .header {
+    padding: 6px 0;
+  }
+  
+  .header .container-fluid {
+    padding: 10px 10px;
+  }
+  
+  .logo img {
+    height: 35px;
+  }
+  
+  .badge.promotion {
+    font-size: 13px;  /* 🔴 INCREASE THIS for 360px devices "15% OFF" text */
+    padding: 2px 6px;
+  }
+  
+  .phone-number {
+    font-size: 24px;  /* 🔴 INCREASE THIS for 360px devices phone number */
+  }
+}
+
+/* Extra small devices (320px and below) - ADDED */
+@media (max-width: 350px) {
+  .header .container-fluid {
+    padding: 10px 10px;
+  }
+  .logo img {
+    height: 32px;
+  }
+  
+  .badge.promotion {
+    font-size: 13px;
+    padding: 2px 5px;
+  }
+  
+  .phone-number {
+    font-size:23px;
+  }
+}
+
+
+
+/* Extra small devices (320px and below) - ADDED */
+@media (max-width: 320px) {
+  .header .container-fluid {
+    padding: 8px 10px;
+  }
+  .logo img {
+    height: 32px;
+  }
+  
+  .badge.promotion {
+    font-size: 8px;
+    padding: 2px 5px;
+  }
+  
+  .phone-number {
+    font-size: 11px;
+  }
+}
+
+
 
 
 /* Global Header on Scroll */
@@ -719,6 +745,38 @@ h6 {
   background: transparent !important;
   box-shadow: none !important;
   border-radius: 0;
+}
+
+/* Global Header on Scroll */
+.scrolled .header {
+  /* background: linear-gradient(135deg, #040E18 0%, #093C70 100%); */
+
+  background-color: white;
+}
+
+.scrolled .header .container-fluid {
+  margin-top: 0;
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0;
+}
+
+
+/* =========================================
+   YOUR EXISTING ANIMATION - KEPT AS IS
+   ========================================= */
+
+/* Pulse animation for promotion badge */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1062,7 +1120,7 @@ section,
 --------------------------------------------------------------*/
 .section-title {
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 20px;
   position: relative;
 }
 
@@ -1118,7 +1176,7 @@ section,
 
 @media (max-width: 767px) {
   .section-title {
-    padding-bottom: 40px;
+    padding-bottom: 20px;
   }
 
   .section-title h4 {
@@ -1126,12 +1184,14 @@ section,
     letter-spacing: 3px;
     margin-bottom: 8px;
   }
-
+  .section-title h1{
+    margin-top: -5%;
+  }
   .section-title h1,
   .section-title h2 {
     font-size: 24px;
-    padding-bottom: 15px;
-    margin-bottom: 15px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
   }
 
   .section-title h2:before {
@@ -1301,6 +1361,7 @@ section,
   .hero .hero-content h1 {
     font-size: 3rem;
   }
+  .hero
 }
 
 @media (max-width: 767px) {
@@ -1434,7 +1495,7 @@ section,
   }
 
   .hero .hero-content .hero-btns .cta-btn .big-text {
-    font-size: 28px;
+    font-size: 27px;
   }
 }
 
@@ -1587,13 +1648,13 @@ form button.btn:hover {
 # Why Choose Us Section
 --------------------------------------------------------------*/
 .why-choose-us {
-  padding: 20px 20px !important;
+  padding: 40px 20px !important;
   background-color: #F8F8FF;
 }
 
 .why-choose-us h4 {
   letter-spacing: 13.8px;
-  font-size: 20px;
+  font-size: 48px;
   font-family: "Montserrat";
   line-height: 130%;
   color: #093C70;
@@ -1601,11 +1662,12 @@ form button.btn:hover {
 
 .why-choose-us h1 {
   letter-spacing: -1.92px;
-  font-size: 48px;
+  font-size: 60px;
   font-family: "Montserrat";
   line-height: 100%;
-  color: #202124;
   font-weight: bold;
+  
+  color: #093C70;
 }
 
 .why-choose-us p {
@@ -1619,7 +1681,7 @@ form button.btn:hover {
 .why-choose-us ul {
   list-style: none;
   padding: 0;
-  margin: 0 0 1.5rem 0;
+  margin: 40px 0 1.5rem 0;
   font-family: "Montserrat";
   font-size: 20px;
   line-height: 150%;
@@ -1684,15 +1746,17 @@ form button.btn:hover {
 @media (max-width: 767px) {
   .why-choose-us {
     text-align: center;
+    
+    padding: 40px 20px !important;
   }
 
   .why-choose-us h4 {
-    font-size: 19px;
+    font-size: 30px;
     letter-spacing: 5px;
   }
 
   .why-choose-us h1 {
-    font-size: 31px;
+    font-size: 38px;
     letter-spacing: -1px;
     padding-bottom: 5px;
   }
@@ -1706,6 +1770,7 @@ form button.btn:hover {
     font-size: 20px;
     text-align: left;
     display: inline-block;
+    margin-top: 20px;
   }
 
   .why-choose-us ul li {
@@ -1978,6 +2043,18 @@ form button.btn:hover {
   color: #093C70;
   text-transform: uppercase;
 }
+
+.advantages h2 {
+  /* letter-spacing: 13.8px; */
+  font-size: 40px;
+  font-family: "Montserrat";
+  line-height: 130%;
+  color: #093C70;
+  text-transform: uppercase;
+
+  padding-bottom: 20px;
+}
+
 .advantages .btn {
   font-family: "Montserrat";
   font-size: 20px;
@@ -2020,7 +2097,9 @@ form button.btn:hover {
   }
 
   .advantages h2 {
-    font-size: 26px !important;
+    font-size: 30px !important;
+    
+    margin-top: -10%;
   }
 
   .advantages ul li p {
@@ -2032,7 +2111,14 @@ form button.btn:hover {
   }
 }
 
-
+@media (max-width: 576px) {
+  .advantages h2 {
+    font-size: 36px !important;
+    line-height: 100%;
+    margin-top: -10%;
+    letter-spacing: -1px;
+  }
+}
 /*--------------------------------------------------------------
 # Call To Action Section
 --------------------------------------------------------------*/
@@ -2523,6 +2609,8 @@ form button.btn:hover {
     } */
 }
 
+
+
 /*--------------------------------------------------------------
 # Error 404 Section
 --------------------------------------------------------------*/
@@ -2550,7 +2638,7 @@ form button.btn:hover {
   color: color-mix(in srgb, var(--accent-color), transparent 10%);
   position: relative;
   z-index: 2;
-  animation: pulse 2s infinite;
+  /* animation: pulse 2s infinite; */
 }
 
 .error-404 .error-illustration .circle {

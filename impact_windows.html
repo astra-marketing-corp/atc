@@ -2,15 +2,24 @@
 <html lang="en">
 
 <head>
-  <!-- Google Tag Manager -->
-  <!-- <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-5T9QNLJ5');</script> -->
+<!-- GTM -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WL7WD3WZ');</script>
+<!-- End Google Tag Manager -->
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11161508942"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-11161508942');
+</script>
   <!-- End Google Tag Manager -->
 
   <meta charset="utf-8">
@@ -20,7 +29,7 @@
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/atclogo.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Default Font: Montserrat -->
@@ -47,47 +56,52 @@
 </head>
 
 <body class="index-page">
-  <!-- Google Tag Manager (noscript) -->
-  <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5T9QNLJ5" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe></noscript> -->
-  <!-- End Google Tag Manager (noscript) -->
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid position-relative">
 
-      <div class="d-flex justify-content-between align-items-center flex-wrap">
-        <!-- Location Badge -->
-        <div class="col-md-4 d-flex align-items-center">
-          <span class="badge location text-uppercase montserrat-400 fw-normal">
-            <i class="bi bi-geo-alt-fill me-1"></i>
-            <span id="location">Miami</span>
-          </span>
-        </div>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WL7WD3WZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
-        <!-- Logo -->
-        <div class="col-md-4 d-flex justify-content-center">
-          <a href="/index.html" class="logo d-flex align-items-center">
-            <img src="assets/img/atclogo.webp" alt="Logo">
-            <!-- <h1 class="sitename">Brand<span>Name</span></h1> -->
-          </a>
-        </div>
+ <!-- Event snippet for Request quote conversion page -->
+<script>
+  gtag('event', 'conversion', {'send_to': 'AW-11161508942/jmZwCOGcoaQbEM64nMop'});
+</script>
 
-        <!-- Call To Action -->
-        <div class="col-md-4 d-flex justify-content-end text-end">
-          <a href="tel:+17863679157" class="header-cta-btn text-decoration-none">
-            <div>
-              <span class="badge promotion text-uppercase text-end mb-1">15% off call now</span>
-            </div>
-
-            <h3 class="text-uppercas phone-number" style="color:#2c2967;">
-              CALL (305) 362-1405
-            </h3>
-          </a>
-        </div>
+<!-- Updated HTML Structure for Better Mobile Responsiveness -->
+<header id="header" class="header d-flex align-items-center fixed-top">
+  <div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-center">
+      <!-- Location Badge (Hidden on Mobile) -->
+      <div class="badge location text-uppercase d-none d-md-block">
+        <i class="bi bi-geo-alt-fill me-1" style="color: #E6A225;"></i>
+        <span id="location">Miami</span>
       </div>
-
+      
+      <!-- Logo (Always Visible) -->
+      <div class="d-md-none">
+        <a href="/index.html" class="logo">
+          <img src="assets/img/atclogo.webp" alt="ATC Logo">
+        </a>
+      </div>
+      
+      <!-- Logo for Desktop -->
+      <div class="d-none d-md-flex justify-content-center flex-grow-1">
+        <a href="/index.html" class="logo">
+          <img src="assets/img/atclogo.webp" alt="ATC Logo">
+        </a>
+      </div>
+      
+      <!-- Call To Action (Always Visible) -->
+      <div>
+        <a href="tel:+13053621405" class="header-cta-btn text-decoration-none">
+          <span class="badge promotion text-uppercase">15% OFF CALL NOW</span>
+          <div class="phone-number">CALL (305) 362-1405</div>
+        </a>
+      </div>
     </div>
-  </header><!-- Header -->
+  </div>
+</header><!-- Header -->
 
   <main class="main">
 
@@ -128,10 +142,10 @@
               </div>
 
               <h4 class="text-white text-uppercase">Hurricane-Strength Security Tailored to Your Style</h4>
-              <h1>Impact Windows That Protect & Beautify Your Home</h1>
+              <h1>Impact Windows That Protect You From Hurricane</h1>
 
               <div class="hero-btns mb-4">
-                <a href="tel:+17863679157" class="btn btn-outline-light cta-btn">
+                <a href="tel:+13053621405" class="btn btn-outline-light cta-btn">
                   <span class="small-text">Call us TODAY!</span><br>
                   <span class="big-text">CALL (305) 362-1405</span>
                 </a>
@@ -140,8 +154,8 @@
               <hr>
 
               <div class="text-center mt-4">
-                <h5 class="text-uppercase">Do you have the right measures?</h5>
-                <h6 class="text-uppercase">Call us for a FREE Estimate</h6>
+                <h5 class="text-uppercase">Protect your property Today</h5>
+                <h6 class="text-uppercase">GET FREE Estimate</h6>
               </div>
             </div>
           </div>
@@ -149,8 +163,8 @@
 
         <div class="row justify-content-center">
           <div class=" col-lg-8">
-            <form action="https://aquapropc.com/aquapro-lp/forms/request-form.php" method="POST"
-              class="contact-form row g-3">
+            
+            <form action="forms/request-form.php" method="POST" class="contact-form row g-3">
               <div class="col-md-6">
                 <div class="form-floating">
                   <input type="text" class="form-control" name="full_name" placeholder="Your full name" required>
@@ -174,6 +188,8 @@
                   <select class="form-select" name="service" required>
                     <option value="" disabled selected>Select a service</option>
                     <option value="Impact Windows">Impact Windows</option>
+                    
+                    <option value="Impact Doors">Impact Doors</option>
                   </select>
                   <label>Select a service</label>
                 </div>
@@ -212,20 +228,20 @@
         <div class="row align-items-center g-5">
           <div class="col-md-6">
             <div class="p-0">
-              <h4 class="text-uppercase">Why Trust Us?</h4>
+              <!-- <h4 class="text-uppercase">Why Trust Us?</h4> -->
               <h1 class="text-uppercase">
-                Protecting your property 24/7
+                Why Trust Us?
               </h1>
-              <!-- <p>Miami homeowners and businesses trust us to deliver honest, lasting camera inspection solutions.</p> -->
             </div>
 
-             <ul>
-               <li>Reinforced glass and heavy-duty framing for 24/7 storm protection</li>
-              <li>Defense against wind, rain, and flying debris</li>
-              <li>Reduces outside noise and improves energy efficiency</li>
-              <li>Enhances home security and curb appeal</li>
-              <li>Over 30 years of experience serving South Florida</li>
-              <li>Trusted leader in impact window fabrication and installation</li>
+            <ul>
+              
+              <li>Licensed and Insured</li>
+              <li>Over 30 years serving South Florida homeowners</li>
+              <li>Reinforced frames and impact-resistant glass for 24/7 protection</li>
+              <li>Prevents dangerous wind pressure, flooding, and costly damage</li>
+              <li>Enhances security, energy efficiency, and curb appeal</li>
+              <li>Trusted fabrication and installation with free consultations</li>
             </ul>
 
             <!-- <p>
@@ -234,7 +250,7 @@
               online today.
             </p> -->
 
-            <a href="#" class="btn btn-secondary rounded-2 text-uppercase">
+            <a href="tel:+13053621405" class="btn btn-secondary rounded-2 text-uppercase">
               15% off call now <i class="fa fa-play"></i></a>
             </a>
           </div><!-- Left Column (content) -->
@@ -256,10 +272,10 @@
       <div class="container section-title">
        
         <h1 class="text-uppercase">
-           HOW WE HELP
+           Choose your impact window style
         </h1>
-         <h4 class="text-uppercase">Our Services:</h4>
-         <p>At ATC Shutters, we offer a full range of hurricane-rated impact windows designed to keep your home safe while enhancing its curb appeal. </p>
+         <!-- <h4 class="text-uppercase">Our Services:</h4>
+         <p>At ATC Shutters, we offer a full range of hurricane-rated impact windows designed to keep your home safe while enhancing its curb appeal. </p> -->
       
       </div><!-- End Section Title -->
 
@@ -285,7 +301,7 @@
               </div>
 
               <!-- Button full width -->
-              <a href="#" class="btn w-100 montserrat-700 mt-3">
+              <a href="tel:+13053621405" class="btn w-100 montserrat-700 mt-3">
                 Call Now <i class="fa fa-play"></i>
               </a>
             </div>
@@ -310,7 +326,7 @@
               </div>
 
               <!-- Button full width -->
-              <a href="#" class="btn w-100 montserrat-700 mt-3">
+              <a href="tel:+13053621405" class="btn w-100 montserrat-700 mt-3">
                 Call Now <i class="fa fa-play"></i>
               </a>
             </div>
@@ -336,7 +352,7 @@
               </div>
 
               <!-- Button full width -->
-              <a href="#" class="btn w-100 montserrat-700 mt-3">
+              <a href="tel:+13053621405" class="btn w-100 montserrat-700 mt-3">
                 Call Now <i class="fa fa-play"></i>
               </a>
             </div>
@@ -362,7 +378,7 @@
               </div>
 
               <!-- Button full width -->
-              <a href="#" class="btn w-100 montserrat-700 mt-3">
+              <a href="tel:+13053621405" class="btn w-100 montserrat-700 mt-3">
                 Call Now <i class="fa fa-play"></i>
               </a>
             </div>
@@ -390,8 +406,8 @@
           <!-- Right Column (content) -->
           <div class="col-md-6">
             <!-- <h4 class="montserrat-400 fs-5 text-uppercase">Benefits &amp; Advantages</h4> -->
-            <h4 class="montserrat-400 fs-5 text-uppercase">Pros of using ATC</h4>
-            <h2 class="montserrat-700 text-uppercase fs-1 fw-bold">Why South Florida Homeowners Choose ATC Shutters</h2>
+            <!-- <h4 class="montserrat-600 fs-2 text-uppercase">Pros of using ATC</h4> -->
+            <h2 class="montserrat-700 text-uppercase fs-1 fw-bold">Pros of using ATC</h2>
             <!-- <p>Aqua Pro offers full-service video inspections across the Greater Miami Area:</p> -->
 
            <h5 class="archivo-500 fw-semibold fs-5 mb-4 d-none">Advantages You’ll Enjoy:</h5>
@@ -503,7 +519,12 @@
             <h2 class="montserrat-700 text-uppercase fs-1 fw-bold">CHECK OUR REVIEWS</h2>
           </div>
 
-          <div class="col-md-4 col-lg-4">
+          
+        </div>
+
+        <div class="row g-4">
+
+          <div class="col-md-4 col-lg-3">
             <div class="card h-100 shadow-sm border-1 rounded-4 p-4">
               <p class="testimonial-text mb-4">
                 Great Beautiful Door from ATC. What a great experience working with ATC,
@@ -525,11 +546,8 @@
               </div>
             </div>
           </div><!-- Testimonial 1 -->
-        </div>
-
-        <div class="row g-4">
           <!-- Testimonial 2 -->
-          <div class="col-md-6 col-lg-4">
+          <div class="col-md-6 col-lg-3">
             <div class="card h-100 shadow-sm border-1 rounded-4 p-4">
               <p class="testimonial-text mb-4">
                 Beyond happy with my new doors ! From start to finish the job was seamless. 
@@ -551,7 +569,7 @@
           </div>
 
           <!-- Testimonial 3 -->
-          <div class="col-md-6 col-lg-4">
+          <div class="col-md-6 col-lg-3">
             <div class="card h-100 shadow-sm border-1 rounded-4 p-4">
               <p class="testimonial-text mb-4">
                 I am beyond satisfied and pleased with my new door and impact/casement windows.
@@ -581,7 +599,7 @@
           </div>
 
           <!-- Testimonial 4 -->
-          <div class="col-md-6 col-lg-4">
+          <div class="col-md-6 col-lg-3">
             <div class="card h-100 shadow-sm border-1 rounded-4 p-4">
               <p class="testimonial-text mb-4">
                 Sharing my experience in purchasing a French door with this company, the service was excellent.
@@ -614,14 +632,15 @@
               <img src="assets/img/footer/footer-logo.webp" width="140" height="100" alt="Logo">
             </div><!-- Logo -->
             <h2 class="text-uppercase">
-              About ATC Shutters
+              
+              ATC Impact Windows and Doors
             </h2>
             <p class="text-white fs-6">
-               At ATC Shutters, we build and install quality products that fit your needs. Call us today to schedule your free impact window consultation.
+              At ATC impact window and door, we build and install quality products that fit your needs. Call us today to schedule your free impact window and door consultation.
 
             </p>
             <div class="hero-btns mb-4">
-              <a href="tel:+17863679157" class="btn btn-outline-light cta-btn">
+              <a href="tel:+13053621405" class="btn btn-outline-light cta-btn">
                 <span class="btn-text">CALL US TODAY!</span><br>
                 <span class="btn-number">CALL (305) 362-1405</span>
               </a>
@@ -631,13 +650,13 @@
           <!-- Right Column: Contact Form -->
           <div class="col-lg-7">
             <h2 class="text-uppercase text-center">
-              Do you have the right measures?
+               Do you need protection from hurricane?
             </h2>
             <h4 class="text-uppercase text-center">
               Call us for a FREE Estimate
             </h4>
-            <form action="https://aquapropc.com/aquapro-lp/forms/request-form.php" method="POST"
-              class="contact-form row g-3">
+            
+            <form action="forms/request-form.php" method="POST" class="contact-form row g-3">
               <div class="col-md-6">
                 <div class="form-floating">
                   <input type="text" class="form-control" name="full_name" placeholder="Your full name" required>
@@ -661,6 +680,8 @@
                   <select class="form-select" name="service" required>
                     <option value="" disabled selected>Select a service</option>
                     <option value="Impact Windows">Impact Windows</option>
+                    
+                    <option value="Impact Doors">Impact Doors</option>
                   </select>
                   <label>Select a service</label>
                 </div>
@@ -668,7 +689,7 @@
               <div class="col-12">
                 <button type="submit"
                   class="btn montserrat-700 text-uppercase text-white fs-5 w-100 d-flex align-items-center justify-content-center text-center">
-                  Get Help Now
+                  Get 15% OFF NOW
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
                     <g clip-path="url(#clip0_296_880)">
                       <path
@@ -754,7 +775,18 @@
       });
     });
   </script><!-- Owl Carousel Init -->
+  <script>
+    window.addEventListener('scroll', function() {
+  const header = document.querySelector('.header');
+  if (window.scrollY > 50) {
+    document.body.classList.add('scrolled');
+  } else {
+    document.body.classList.remove('scrolled');
+  }
+});
+  </script>
 
+  <script type="text/javascript" src="//cdn.callrail.com/companies/413402732/3770e61c88759be7edc2/12/swap.js"></script>
 </body>
 
 </html>

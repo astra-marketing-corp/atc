@@ -10,11 +10,15 @@ require '../PHPMailer/src/SMTP.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Sanitize POST data
-    $name    = htmlspecialchars($_POST['name']);
-    $phone   = htmlspecialchars($_POST['phone']);
-    $email   = htmlspecialchars($_POST['email']);
-    $message = htmlspecialchars($_POST['message']);
+    $name    = trim($_POST['full_name'] ?? '');
+    $email   = trim($_POST['email'] ?? '');
+    $phone   = trim($_POST['phone'] ?? '');
+    $service = trim($_POST['service'] ?? '');
 
+     if (!$name || !$email || !$phone || !$service) {
+        header("Location: ../form-error.html");
+        exit;
+    }
     $mail = new PHPMailer(true);
 
     // Set charset to UTF-8 to support emojis and special characters
@@ -25,14 +29,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
-        $mail->Username   = 'harry@astraresults.com';    // Your Gmail
-        $mail->Password   = 'pzuhhxmmirtxsjry';         // Your Gmail App Password
+        $mail->Username   = 'fiallo2000@gmail.com';    // Your Gmail
+        $mail->Password   = 'txgkmczrwcohwhoj';         // Your Gmail App Password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port       = 465;
 
         // Sender & recipient
-        $mail->setFrom('harry@astraresults.com', 'Astra Results');
-        $mail->addAddress('carvel@astraresults.com', 'Carvel Russ');
+        $mail->setFrom('fiallo2000@gmail.com', 'ATC Shutters');
+        $mail->addAddress('joseph@astraresults.com', 'Joseph');
 
         // Email content
         $mail->isHTML(true);
@@ -42,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p><strong>Name:</strong> {$name}</p>
             <p><strong>Phone:</strong> {$phone}</p>
             <p><strong>Email:</strong> {$email}</p>
-            <p><strong>Message:</strong><br>{$message}</p>
+            <p><strong>Service:</strong><br>{$service}</p>
         ";
 
         // Send email
